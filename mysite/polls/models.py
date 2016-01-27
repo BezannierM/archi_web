@@ -9,6 +9,6 @@ class Evenement(models.Model):
     nom = models.CharField(max_length=100)
     date_eve = models.DateField(default=True)
     nb_personne = models.PositiveIntegerField(default=0)
-    createur = models.ForeignKey(User, user_id)
+    createur = models.ForeignKey(User, id)
     participant = User.objects.all()
 
