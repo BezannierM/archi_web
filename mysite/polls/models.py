@@ -29,6 +29,7 @@ class MyUser(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
+    pseudo = models.Charfield(max_lenght=50)
     date_de_naissance = models.DateField()
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
@@ -40,11 +41,7 @@ class MyUser(AbstractBaseUser):
 
     def get_full_name(self):
         # The user is identified by their email address
-        return self.email
-
-    def get_short_name(self):
-        # The user is identified by their email address
-        return self.email
+        return self.pseudo
 
     def __str__(self):              # __unicode__ on Python 2
         return self.email
