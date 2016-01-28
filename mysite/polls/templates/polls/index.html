@@ -1,7 +1,7 @@
-{% if latest_question_list %}
+{% if latest_user_list %}
     <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% for user in latest_user_list %}
+        <li><a href="/polls/{{ user.id }}/">{{ user.username }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
