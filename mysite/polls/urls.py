@@ -11,5 +11,5 @@ urlpatterns = [
 
     url(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
 	
-	url(r'^$', views.ConnectionView.as_view(), name='connexion'),
+	url(r'^$', views.ConnexionView.as_view(), name='connexion'),
 ]
