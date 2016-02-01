@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.ConnexionView, name='connexion'),
+    url(r'^inscription', views.InscriptionView, name='inscription'),
 ]

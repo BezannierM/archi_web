@@ -12,4 +12,6 @@ def ConnexionView(request):
 	
 	return render(request,'connexion.html')
 
-
+def InscriptionView(request):
+    
+    return render(request,'inscription.html')
