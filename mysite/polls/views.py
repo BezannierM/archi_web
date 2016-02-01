@@ -28,8 +28,6 @@ class ResultsView(generic.DetailView):
     model = User
     template_name = 'polls/results.html'
 
-class ConnexionView(generic.DetailView):
-	
-	template_name = 'polls/connexion.html'
+
 
 
