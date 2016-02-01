@@ -23,33 +23,51 @@
       </header>
       <section class="row">
       
+    <!-- textarea -->
         <form class="form-horizontal col-lg-6">
         	<div class="form-group">
         		<input type="text" class="form-control" id="prenom" placeholder="prenom">
-        	</div>	
+        	</div>
         	<div class="form-group">
   				<input type="text" class="form-control" id="nom" placeholder="nom">
  			</div>
+ 			
+ 	<!-- email -->		
  			<div class="form-group">
         		<input type="text" class="form-control" id="email" placeholder="email">
         	</div>	
         	<div class="form-group">
   				<input type="text" class="form-control" id="confirm_email" placeholder="confirmer l'email">
  			</div>
+ 			
+ 	<!-- password -->	
  			<div class="form-group">
-        		<input type="text" class="form-control" id="password" placeholder="mot de passe">
+        		<input type="password" class="form-control" id="password" placeholder="mot de passe">
         	</div>	
         	<div class="form-group">
-  				<input type="text" class="form-control" id="confirm_pass" placeholder="confirmer le mot de passe">
+  				<input type="password" class="form-control" id="confirm_pass" placeholder="confirmer le mot de passe">
  			</div>
+ 			
+	<!-- radios -->
   			<div class="form-group">
-  			<div class="checkbox">
-    			<label>
-      				<input type="checkbox"> homme
-      				<input type="checkbox"> femme
-      				<input type="text" class="form-control" id="autre" placeholder="autre">
-    			</label>
-  			</div>
+  			<div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="homme" checked="checked">
+      homme
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="femme">
+      femme
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="autre">
+      autre
+    </label>
+	</div>
   			
   			<button type="submit" class="btn btn-default">Inscription</button>
   			
