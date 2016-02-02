@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.ConnexionView, name='connexion'),
     url(r'^inscription', views.InscriptionView, name='inscription'),
-    url(r'^(?<pk>[0-9]+)/$', views.ProfilView, name='profil'),
+    url(r'^(?P<pk>[0-9]+)/$', views.ProfilView, name='profil'),
 ]
