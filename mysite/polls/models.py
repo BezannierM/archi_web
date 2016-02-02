@@ -12,3 +12,9 @@ class Evenement(models.Model):
     createur = models.ForeignKey(User, id)
     participant = User.objects.all()
 
+class Profil(models.Model):
+    user = models.OneToOneField(User)
+    avatar = models.ImageField(upload_to="avatars/", null=True, blank=True)
+
+    def __str__(self):
+        return "{0}".format(self.user.username)
