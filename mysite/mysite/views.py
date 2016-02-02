@@ -15,3 +15,7 @@ def ConnexionView(request):
 def InscriptionView(request):
     
     return render(request,'inscription.html')
+
+def ProfilView(request):
+    
+    return render(request,'profil.html')
