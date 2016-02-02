@@ -1,28 +1,40 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 
-  <head>
+<head>
+
     <meta charset="utf-8">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body { background-color:#DDD; }
-      [class*="col"] { margin-bottom: 20px; }
-      img { width: 100%; }
-      .well {
-        background-color:#CCC;
-        padding: 20px;
-      }
-    </style>
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Faceroulette - connexion</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
 
   <body>
     <div class="container">
       <header class="page-header">
-        <h1>FaceRoulette</h1>
+      	<h1>Faceroulette</h1>
+        <h3>Se Connecter</h3>
       </header>
       <section class="row">
       
-        <form class="form-horizontal col-lg-6">
+        <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6">
         	<div class="form-group">
         		<input type="text" class="form-control" id="login" placeholder="email">
         	</div>	
@@ -36,10 +48,10 @@
     			</label>
   			</div>
   			
-  			<button type="submit" class="btn btn-default">Connexion</button>
+  			<button type="submit" class="btn btn-info">Connexion</button>
   			
   			<div class="btn-group">
-				<button><a href="{% url 'inscription'%}" class="btn btn-large btn-info" > Creer un compte</a></button>
+				<button class="btn btn-large btn-Success" > Creer un compte </button>
   			</div>
 		</form>
         
