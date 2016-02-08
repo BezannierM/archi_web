@@ -39,22 +39,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">faceroulette</a>
+                <a class="navbar-brand" href="{% url 'profil'%}">faceroulette</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">Amis</a>
+                        <a href="{% url 'amis'%}">Amis</a>
                     </li>
                     <li>
-                        <a href="#">Evenement</a>
+                        <a href="{% url 'evenement'%}">Evenement</a>
                     </li>
                     <li>
-                        <a href="#">Chat</a>
+                        <a href="{% url 'chat'%}">Chat</a>
                     </li>
                      <li>
-                        <a href="#">Deconnexion</a>
+                        <a href="{% url 'deconnexion'%}">Deconnexion</a>
                     </li>
                 </ul>
             </div>
@@ -65,10 +65,10 @@
    {% block body_block %}{% endblock %}
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="../static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
     
 </body>
 
