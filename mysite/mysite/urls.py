@@ -23,4 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.ConnexionView, name='connexion'),
     url(r'^inscription', views.InscriptionView, name='inscription'),
+    url(r'^deconnexion$', views.deconnexion, name='deconnexion'),
+    url(r'^1', views.ProfilView, name='profil'),
 ]

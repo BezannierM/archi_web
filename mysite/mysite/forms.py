@@ -1,3 +1,13 @@
+from django import forms
+
 class ConnexionForm(forms.Form):
-    username = forms.CharField(label="Nom d'utilisateur", max_length=30)
-    password = forms.CharField(label="Mot de passe", widget=forms.PasswordInput)
+    username = forms.CharField(label="", max_length=30)
+    password = forms.CharField(label="", widget=forms.PasswordInput)
+
+class InscriptionForm(forms.Form):
+    pseudo = forms.CharField(label="", max_length=30)
+    prenom = forms.CharField(label="", max_length=30)
+    nom = forms.CharField(label="", max_length=30)
+    email = forms.CharField(label="", max_length=30)
+    password = forms.CharField(label="", widget=forms.PasswordInput)
+    passwordconf = forms.CharField(label="", widget=forms.PasswordInput)
