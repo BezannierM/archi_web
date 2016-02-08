@@ -34,13 +34,21 @@
         <h3>Se Connecter</h3>
       </header>
       <section class="row">
-      
+      {% if error %}
+		<p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
+	  {% endif %}
         <form class="form-horizontal col-lg-4 col-md-5 col-sm-6 col-xs-6">
         	<div class="form-group">
-        		<input type="text" class="form-control" id="login" placeholder="email">
-        	</div>	
-        	<div class="form-group">
-  				<input type="password" class="form-control input-md" id="password" placeholder="password">
+        		{% if user.is_authenticated %}
+
+				{% else %}
+        		
+        		<form action="/your-name/" method="post">
+    				{% csrf_token %}
+    				{{ form.as_p }}
+   					 <button type="submit" class="btn btn-info">Connexion</button>
+				</form>
+				{% endif %}
  			</div>
   			<div class="form-group">
   			<div class="checkbox">
@@ -48,8 +56,6 @@
       				<input type="checkbox"> Se souvenir de moi
     			</label>
   			</div>
-  			
-  			<button type="submit" class="btn btn-info">Connexion</button>
   			
   			<div class="btn-group">
 				<button><a href="{% url 'inscription'%}" class="btn btn-large btn-Success" > Creer un compte </button>
