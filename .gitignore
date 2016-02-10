@@ -1,0 +1,6 @@
+# Ignorer tous les fichiers pyc
+*.pyc
+# Ignorer tous les fichiers ~
+*~
+
+
