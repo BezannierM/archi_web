@@ -1,10 +1,10 @@
-from django.shortcuts import render
-from .models import User
-from .forms import *
+from django.shortcuts import render, redirect
+#from face.models import User
+from django.contrib.auth.models import User
+#from .forms import *
 from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login, logout
-from .forms import ConnexionForm, InscriptionForm
-from django.shortcuts import redirect
+from face.forms import ConnexionForm, InscriptionForm
 from django.contrib.auth.decorators import login_required
 
 
@@ -57,7 +57,7 @@ def InscriptionView(request):
 
     return render(request,'inscription.html', locals())
 
-#@login_required(login_url='/connexion/')
+@login_required(login_url='/connexion/')
 def ProfilView(request):
     
     return render(request,'profil.html')
@@ -66,22 +66,22 @@ def deconnexion(request):
     logout(request)
     return redirect(reverse(ConnexionView))
 
-#@login_required
+@login_required
 def AmisView(request):
     
     return render(request,'amis.html')
 
-#@login_required
+@login_required
 def EvenementView(request):
     
     return render(request,'evenement.html')
 
-#@login_required
+@login_required
 def ChatView(request):
     
     return render(request,'chat.html')
 
-#@login_required
+@login_required
 def BaseView(request):
     
     return render(request,'base.html')
