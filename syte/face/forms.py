@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth import authenticate,login
 
 class ConnexionForm(forms.Form):
     username = forms.CharField(label="", max_length=30)

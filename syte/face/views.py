@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-#from face.models import User
+from face.models import User
 from django.contrib.auth.models import User
 #from .forms import *
 from django.core.urlresolvers import reverse
@@ -22,6 +22,7 @@ def ConnexionView(request):
             user = authenticate(username=name, password=passw)  # Nous vérifions si les données sont correctes
             if user is not None:
                 login(request, user)  # nous connectons l'utilisateur
+                return redirect(reverse(ProfilView))
             else: # sinon une erreur sera affichée
                 error = True
     else:
@@ -33,7 +34,7 @@ def InscriptionView(request):
     error = False
     
     if request.method == "POST":
-        form = IscriptionForm(request.POST)
+        form = InscriptionForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["pseudo"]
             name = form.cleaned_data["prenom"]
